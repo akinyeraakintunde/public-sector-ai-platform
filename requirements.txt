@@ -1,8 +1,4 @@
-from pydantic import BaseModel
-import os
-
-class Settings(BaseModel):
-    app_name: str = "Public Sector AI Platform (SC-Aligned)"
-    environment: str = os.getenv("ENVIRONMENT", "dev")
-
-settings = Settings()
+fastapi==0.115.0
+uvicorn[standard]==0.30.6
+pydantic==2.8.2
+python-dotenv==1.0.1
