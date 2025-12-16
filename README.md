@@ -1,4 +1,4 @@
-# Public Sector AI Platform (SC-Aligned) — Simulated
+# Public Sector AI Platform (SC-Aligned) Simulated
 
 A simulated public-sector AI system built to demonstrate SC-aligned engineering for AI Solutions Engineer roles.
 
