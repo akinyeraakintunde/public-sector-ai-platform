@@ -12,3 +12,4 @@ app.include_router(health_router, prefix="/api/v1", tags=["health"])
 @app.get("/")
 def root():
     return {"message": "Public Sector AI Platform API is running"}
+from backend.app.api.v1.ask import router as ask_router
