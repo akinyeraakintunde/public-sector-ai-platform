@@ -8,7 +8,7 @@ setup_logging()
 app = FastAPI(title=settings.app_name)
 
 app.include_router(health_router, prefix="/api/v1", tags=["health"])
-
+app.include_router(ask_router, prefix="/api/v1", tags=["ask"])
 @app.get("/")
 def root():
     return {"message": "Public Sector AI Platform API is running"}
