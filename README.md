@@ -1,4 +1,4 @@
-# Public Sector AI Platform (SC-Aligned) — Simulated
+# Public Sector AI Platform (SC-Aligned) Simulated
 
 A simulated, SC-aligned public-sector AI platform demonstrating how LLM-powered systems can be safely designed, evaluated, and deployed in regulated UK environments.
 
