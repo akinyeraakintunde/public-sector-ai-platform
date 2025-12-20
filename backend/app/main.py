@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+
 
 from app.api.v1.health import router as health_router
 from app.api.v1.ask import router as ask_router
@@ -8,12 +8,14 @@ from app.core.logging import setup_logging
 
 setup_logging()
 
-app = FastAPI(title=settings.app_name)
+from fastapi import FastAPI
 
-app.include_router(health_router, prefix="/api/v1", tags=["health"])
-app.include_router(ask_router, prefix="/api/v1", tags=["ask"])
-app.include_router(audit_router, prefix="/api/v1", tags=["audit"])
+app = FastAPI(
+    title="Public Sector AI Platform (Demo)",
+    description="Multi-agent AI platform for public-sector decision intelligence",
+    version="1.0.0"
+)
 
-@app.get("/")
-def root():
-    return {"message": "Public Sector AI Platform API is running"}
+@app.get("/health")
+def health():
+    return {"status": "ok"}
